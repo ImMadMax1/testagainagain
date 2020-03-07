@@ -31,9 +31,9 @@
     "destroyTool": "Not specified",
     "affectedBySilkTouch": true,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:CheeseSlices"
     },
-    "dropAmount": 1,
+    "dropAmount": 16,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": true,
