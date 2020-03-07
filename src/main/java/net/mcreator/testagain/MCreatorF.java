@@ -20,7 +20,7 @@ public class MCreatorF extends Elementstestagain.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(Blocks.JUNGLE_LEAVES, (int) (1));
+				return new ItemStack(Blocks.BUBBLE_COLUMN, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)

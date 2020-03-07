@@ -34,6 +34,14 @@
       "ids": {}
     },
     {
+      "name": "KindaQuirkyDoe",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
       "name": "KindaQuirkyDoeOnBlockRightClicked",
       "type": "procedure",
       "sortid": 4,
@@ -50,12 +58,20 @@
       }
     },
     {
-      "name": "KindaQuirkyDoe",
-      "type": "block",
+      "name": "CheeseSliceremovepotioneffect",
+      "type": "procedure",
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "ids": {}
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],

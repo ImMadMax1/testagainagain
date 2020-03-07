@@ -12,10 +12,13 @@
     "stackSize": 16,
     "nutritionalValue": 1,
     "saturation": 0.4,
-    "eatingSpeed": 100,
+    "eatingSpeed": 2,
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "eat",
-    "hasGlow": false
+    "hasGlow": false,
+    "onEaten": {
+      "name": "CheeseSliceremovepotioneffect"
+    }
   }
 }

@@ -1,11 +1,11 @@
 package net.mcreator.testagain;
 
-import net.minecraft.entity.Entity;
-
 @Elementstestagain.ModElement.Tag
 public class MCreatorKindaQuirkyDoeOnBlockRightClicked extends Elementstestagain.ModElement {
+
 	public MCreatorKindaQuirkyDoeOnBlockRightClicked(Elementstestagain instance) {
 		super(instance, 4);
+
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
@@ -13,7 +13,11 @@ public class MCreatorKindaQuirkyDoeOnBlockRightClicked extends Elementstestagain
 			System.err.println("Failed to load dependency entity for procedure MCreatorKindaQuirkyDoeOnBlockRightClicked!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		entity.remove();
+
 	}
+
 }
