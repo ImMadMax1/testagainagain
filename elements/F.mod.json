@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "tab",
   "definition": {
-    "name": "F",
+    "name": "Random Shit",
     "icon": {
-      "value": "Blocks.LEAVES#3"
+      "value": "Blocks.BUBBLE_COLUMN"
     },
     "showSearch": false
   }
