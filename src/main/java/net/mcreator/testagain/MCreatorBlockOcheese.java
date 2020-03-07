@@ -2,6 +2,7 @@
 package net.mcreator.testagain;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.IPlantable;
 
 import net.minecraft.world.storage.loot.LootContext;
@@ -39,7 +40,8 @@ public class MCreatorBlockOcheese extends Elementstestagain.ModElement {
 	}
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.SNOW).sound(SoundType.SLIME).hardnessAndResistance(1f, 10f).lightValue(0).tickRandomly());
+			super(Block.Properties.create(Material.SNOW).sound(SoundType.SLIME).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
+					.harvestTool(ToolType.SHOVEL).tickRandomly());
 			setRegistryName("blockocheese");
 		}
 

@@ -2,12 +2,12 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "cheese",
-    "textureTop": "cheese",
-    "textureLeft": "cheese",
-    "textureFront": "cheese",
-    "textureRight": "cheese",
-    "textureBack": "cheese",
+    "texture": "quirky",
+    "textureTop": "quirky",
+    "textureLeft": "quirky",
+    "textureFront": "quirky",
+    "textureRight": "quirky",
+    "textureBack": "quirky",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -20,50 +20,50 @@
     "My": 1.0,
     "Mz": 1.0,
     "faceShape": "SOLID",
-    "name": "Block Ocheese",
+    "name": "Kinda Quirky Doe",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": true,
     "creativeTab": {
-      "value": "BUILDING_BLOCKS"
+      "value": "CUSTOM:F"
     },
-    "destroyTool": "shovel",
-    "affectedBySilkTouch": false,
+    "destroyTool": "Not specified",
+    "affectedBySilkTouch": true,
     "customDrop": {
-      "value": "CUSTOM:CheeseSlices"
+      "value": ""
     },
-    "dropAmount": 16,
-    "isBeaconBase": false,
-    "enchantPowerBonus": 0.0,
+    "dropAmount": 1,
+    "isBeaconBase": true,
+    "enchantPowerBonus": 14.0,
     "plantsGrowOn": true,
-    "canProvidePower": false,
+    "canProvidePower": true,
     "lightOpacity": 255,
     "material": {
-      "value": "SNOW"
+      "value": "PACKED_ICE"
     },
-    "tickRate": 1,
-    "tickRandomly": true,
+    "tickRate": 10,
+    "tickRandomly": false,
     "isReplaceable": false,
     "isFlammable": false,
-    "colorOnMap": "GOLD",
+    "colorOnMap": "BLACK",
     "creativePickItem": {
       "value": ""
     },
-    "isNotColidable": false,
+    "isNotColidable": true,
     "soundOnStep": {
-      "value": "SLIME"
+      "value": "SWEET_BERRY_BUSH"
     },
-    "luminance": 0.0,
+    "luminance": 0.86,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "SPIT"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "particleAmount": 14,
     "particleSpawningCondition": "ALWAYS",
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -73,6 +73,9 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
+    "onRightClicked": {
+      "name": "KindaQuirkyDoeOnBlockRightClicked"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
