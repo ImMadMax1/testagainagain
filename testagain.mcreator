@@ -34,30 +34,6 @@
       "ids": {}
     },
     {
-      "name": "KindaQuirkyDoe",
-      "type": "block",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "KindaQuirkyDoeOnBlockRightClicked",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "CheeseSliceremovepotioneffect",
       "type": "procedure",
       "sortid": 4,
@@ -79,7 +55,6 @@
   "language_map": {
     "en_us": {
       "block.testagain.blockocheese": "Block Ocheese",
-      "block.testagain.kindaquirkydoe": "Kinda Quirky Doe",
       "item.testagain.cheeseslices": "Cheese Slice",
       "itemGroup.tabf": "F",
       "item.testagain.knife": "Knife"
