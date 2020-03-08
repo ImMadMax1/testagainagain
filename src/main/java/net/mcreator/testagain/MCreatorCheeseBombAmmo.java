@@ -7,7 +7,6 @@ import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
@@ -28,7 +27,7 @@ public class MCreatorCheeseBombAmmo extends Elementstestagain.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(8));
+			super(new Item.Properties().group(MCreatorAllofittab.tab).maxStackSize(8));
 			setRegistryName("cheesebombammo");
 		}
 

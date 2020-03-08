@@ -60,7 +60,7 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(MCreatorF.tab).maxDamage(100));
+			super(new Item.Properties().group(MCreatorAllofittab.tab).maxDamage(100));
 			setRegistryName("cheesebomb");
 		}
 
@@ -81,12 +81,6 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 		}
 
 		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
-		}
-
-		@Override
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
@@ -99,13 +93,13 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 					}
 				}
 				if (entity.abilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, itemstack) > 0 || slotID != -1) {
-					float power = 1f;
+					float power = 0.7000000000000001f;
 					ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 					entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
 					entityarrow.setSilent(true);
 					entityarrow.setIsCritical(false);
 					entityarrow.setDamage(0);
-					entityarrow.setKnockbackStrength(5);
+					entityarrow.setKnockbackStrength(3);
 					entityarrow.setFire(100);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					int x = (int) entity.posX;

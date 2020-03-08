@@ -6,7 +6,6 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.world.World;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
@@ -25,7 +24,7 @@ public class MCreatorCheeseSlices extends Elementstestagain.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(16)
+			super(new Item.Properties().group(MCreatorAllofittab.tab).maxStackSize(16)
 					.food((new Food.Builder()).hunger(1).saturation(0.4f).setAlwaysEdible().build()));
 			setRegistryName("cheeseslices");
 		}

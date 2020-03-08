@@ -6,21 +6,20 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.block.Blocks;
 
 @Elementstestagain.ModElement.Tag
-public class MCreatorF extends Elementstestagain.ModElement {
-	public MCreatorF(Elementstestagain instance) {
-		super(instance, 1);
+public class MCreatorAllofittab extends Elementstestagain.ModElement {
+	public MCreatorAllofittab(Elementstestagain instance) {
+		super(instance, 9);
 	}
 
 	@Override
 	public void initElements() {
-		tab = new ItemGroup("tabf") {
+		tab = new ItemGroup("taballofittab") {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(Blocks.BUBBLE_COLUMN, (int) (1));
+				return new ItemStack(MCreatorCheeseBomb.block, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)

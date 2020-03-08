@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "tab",
   "definition": {
-    "name": "Random Shit",
+    "name": "All-Of-It Mod",
     "icon": {
-      "value": "Blocks.BUBBLE_COLUMN"
+      "value": "CUSTOM:CheeseBomb"
     },
     "showSearch": false
   }

@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Knife",
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:Allofittab"
     },
     "toolType": "Spade",
     "harvestLevel": 1,

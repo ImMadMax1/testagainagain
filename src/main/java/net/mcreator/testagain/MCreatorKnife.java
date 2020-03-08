@@ -5,7 +5,6 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
@@ -43,7 +42,7 @@ public class MCreatorKnife extends Elementstestagain.ModElement {
 			public Ingredient getRepairMaterial() {
 				return null;
 			}
-		}, 1, 0.1f, new Item.Properties().group(ItemGroup.TOOLS)) {
+		}, 1, 0.1f, new Item.Properties().group(MCreatorAllofittab.tab)) {
 		}.setRegistryName("knife"));
 	}
 }

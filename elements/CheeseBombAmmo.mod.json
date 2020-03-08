@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Cheese Bomb Ammo",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Allofittab"
     },
     "stackSize": 8,
     "enchantability": 0,

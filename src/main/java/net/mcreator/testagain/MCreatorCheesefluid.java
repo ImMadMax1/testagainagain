@@ -23,7 +23,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.Items;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BucketItem;
 import net.minecraft.fluid.Fluid;
@@ -77,8 +76,9 @@ public class MCreatorCheesefluid extends Elementstestagain.ModElement {
 				}
 			}
 		}.setRegistryName("cheesefluid"));
-		elements.items.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ItemGroup.MISC))
-				.setRegistryName("cheesefluid_bucket"));
+		elements.items
+				.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MCreatorAllofittab.tab))
+						.setRegistryName("cheesefluid_bucket"));
 	}
 
 	@Override

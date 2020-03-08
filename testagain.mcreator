@@ -2,14 +2,6 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "F",
-      "type": "tab",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "BlockOcheese",
       "type": "block",
       "sortid": 2,
@@ -176,6 +168,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "Allofittab",
+      "type": "tab",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -183,10 +183,10 @@
   "language_map": {
     "en_us": {
       "block.testagain.blockocheese": "Block Ocheese",
+      "itemGroup.taballofittab": "All-Of-It Mod",
       "item.testagain.cheesebombammo": "Cheese Bomb Ammo",
       "fluid.cheesefluid": "Cheesefluid",
       "advancements.cheeseswimming.descr": "Go swimming in cheese",
-      "itemGroup.tabf": "Random Shit",
       "entity.testagain.cheesemuncher": "Cheese Muncher",
       "item.testagain.cheeseslices": "Cheese Slice",
       "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",

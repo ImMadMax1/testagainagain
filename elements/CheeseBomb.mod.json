@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Cheese Bomb",
     "creativeTab": {
-      "value": "CUSTOM:F"
+      "value": "CUSTOM:Allofittab"
     },
     "stackSize": 1,
     "ammoItem": {
@@ -18,12 +18,12 @@
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
-    "hasGlow": true,
+    "hasGlow": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 1.0,
+    "bulletPower": 0.7000000000000001,
     "bulletDamage": 0.0,
-    "bulletKnockback": 5,
+    "bulletKnockback": 3,
     "bulletParticles": false,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {
