@@ -28,6 +28,8 @@ import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
 
@@ -88,23 +90,49 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
-				float power = 1f;
-				ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
-				entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
-				entityarrow.setSilent(true);
-				entityarrow.setIsCritical(false);
-				entityarrow.setDamage(0);
-				entityarrow.setKnockbackStrength(5);
-				entityarrow.setFire(100);
-				itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
-				int x = (int) entity.posX;
-				int y = (int) entity.posY;
-				int z = (int) entity.posZ;
-				world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
-						SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
-				entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
-				world.addEntity(entityarrow);
+				int slotID = -1;
+				for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
+					ItemStack stack = entity.inventory.mainInventory.get(i);
+					if (stack != null && stack.getItem() == new ItemStack(MCreatorCheeseBombAmmo.block, (int) (1)).getItem()) {
+						slotID = i;
+						break;
+					}
+				}
+				if (entity.abilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, itemstack) > 0 || slotID != -1) {
+					float power = 1f;
+					ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
+					entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
+					entityarrow.setSilent(true);
+					entityarrow.setIsCritical(false);
+					entityarrow.setDamage(0);
+					entityarrow.setKnockbackStrength(5);
+					entityarrow.setFire(100);
+					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
+					int x = (int) entity.posX;
+					int y = (int) entity.posY;
+					int z = (int) entity.posZ;
+					world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+							SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+					if (entity.abilities.isCreativeMode) {
+						entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
+					} else {
+						ItemStack stack = entity.inventory.getStackInSlot(slotID);
+						if (new ItemStack(MCreatorCheeseBombAmmo.block, (int) (1)).isDamageable()) {
+							if (stack.attemptDamageItem(1, random, entity)) {
+								stack.shrink(1);
+								stack.setDamage(0);
+								if (stack.isEmpty())
+									entity.inventory.deleteStack(stack);
+							}
+						} else {
+							stack.shrink(1);
+							if (stack.isEmpty())
+								entity.inventory.deleteStack(stack);
+						}
+					}
+					world.addEntity(entityarrow);
+				}
 			}
 		}
 	}
@@ -135,12 +163,12 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(MCreatorCheeseBomb.block, (int) (1));
+			return new ItemStack(MCreatorCheeseBombAmmo.block, (int) (1));
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return null;
+			return new ItemStack(MCreatorCheeseBombAmmo.block, (int) (1));
 		}
 
 		@Override

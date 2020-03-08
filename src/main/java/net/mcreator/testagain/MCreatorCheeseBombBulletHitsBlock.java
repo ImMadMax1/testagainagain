@@ -313,5 +313,38 @@ public class MCreatorCheeseBombBulletHitsBlock extends Elementstestagain.ModElem
 			}
 			world.setBlockState(_bp, _bs, 3);
 		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorCheesefluid.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorCheesefluid.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorCheesefluid.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
 	}
 }

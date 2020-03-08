@@ -116,6 +116,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "CheeseBombAmmo",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -125,6 +133,7 @@
       "block.testagain.blockocheese": "Block Ocheese",
       "item.testagain.cheeseslices": "Cheese Slice",
       "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
+      "item.testagain.cheesebombammo": "Cheese Bomb Ammo",
       "item.testagain.cheesebomb": "Cheese Bomb",
       "fluid.cheesefluid": "Cheesefluid",
       "itemGroup.tabf": "Random Shit",
