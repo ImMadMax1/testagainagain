@@ -1,11 +1,21 @@
 package net.mcreator.testagain;
 
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
+
+import java.util.Iterator;
+
 @Elementstestagain.ModElement.Tag
 public class MCreatorCheesefluidMobplayerCollidesBlock extends Elementstestagain.ModElement {
-
 	public MCreatorCheesefluidMobplayerCollidesBlock(Elementstestagain instance) {
 		super(instance, 5);
-
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
@@ -13,9 +23,7 @@ public class MCreatorCheesefluidMobplayerCollidesBlock extends Elementstestagain
 			System.err.println("Failed to load dependency entity for procedure MCreatorCheesefluidMobplayerCollidesBlock!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
-
 		if (entity instanceof ServerPlayerEntity) {
 			Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 					.getAdvancement(new ResourceLocation("testagain:cheeseswimming"));
@@ -28,7 +36,11 @@ public class MCreatorCheesefluidMobplayerCollidesBlock extends Elementstestagain
 				}
 			}
 		}
-
+		entity.setMotionMultiplier(null, new Vec3d(0.25D, (double) 0.05F, 0.25D));
+		if (entity instanceof PlayerEntity)
+			((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(MCreatorCheeseSlices.block, (int) (1)).getItem() == p.getItem(),
+					(int) 999);
+		if (entity instanceof PlayerEntity)
+			((PlayerEntity) entity).getFoodStats().setFoodLevel((int) 0);
 	}
-
 }

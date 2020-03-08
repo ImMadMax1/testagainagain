@@ -1,6 +1,9 @@
 {
   "block.testagain.blockocheese": "Block Ocheese",
   "item.testagain.cheeseslices": "Cheese Slice",
+  "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
+  "item.testagain.cheesebomb": "Cheese Bomb",
+  "fluid.cheesefluid": "Cheesefluid",
   "itemGroup.tabf": "Random Shit",
   "item.testagain.knife": "Knife"
 }
