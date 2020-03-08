@@ -50,6 +50,46 @@
       }
     },
     {
+      "name": "Cheeseswimming",
+      "type": "achievement",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Cheesefluid",
+      "type": "fluid",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CheesefluidMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheeseBomb",
+      "type": "gun",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
       "name": "CheeseBombBulletHitsBlock",
       "type": "procedure",
       "sortid": 5,
@@ -76,14 +116,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "CheeseBomb",
-      "type": "gun",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -92,8 +124,7 @@
     "en_us": {
       "block.testagain.blockocheese": "Block Ocheese",
       "item.testagain.cheeseslices": "Cheese Slice",
-      "item.testagain.cheesebomb": "Cheese Bomb",
-      "itemGroup.tabf": "F",
+      "itemGroup.tabf": "Random Shit",
       "item.testagain.knife": "Knife"
     }
   },
