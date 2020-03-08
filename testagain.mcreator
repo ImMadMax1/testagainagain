@@ -118,6 +118,58 @@
       }
     },
     {
+      "name": "CheeseMuncherEntityDies",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheeseMuncherPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheeseMuncher",
+      "type": "mob",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
       "name": "CheeseBombAmmo",
       "type": "item",
       "sortid": 7,
@@ -133,7 +185,6 @@
       "block.testagain.blockocheese": "Block Ocheese",
       "item.testagain.cheeseslices": "Cheese Slice",
       "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
-      "item.testagain.cheesebombammo": "Cheese Bomb Ammo",
       "item.testagain.cheesebomb": "Cheese Bomb",
       "fluid.cheesefluid": "Cheesefluid",
       "itemGroup.tabf": "Random Shit",
