@@ -17,7 +17,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.FallingBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -38,7 +37,7 @@ public class MCreatorBlockOcheese extends Elementstestagain.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
-	public static class CustomBlock extends FallingBlock {
+	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.SNOW).sound(SoundType.SLIME).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.SHOVEL).tickRandomly());
