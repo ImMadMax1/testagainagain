@@ -2,14 +2,14 @@ modLoader="javafml"
 loaderVersion="[28,)"
 
 [[mods]]
-modId="testagain"
+modId="allofitmod"
 version="1.0.0"
-displayName="testagain"
+displayName="All-Of-It Mod"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-authors="Max, MCreator"
+authors="ImMadMax And SirLanceathott, MCreator"
 
-[[dependencies.testagain]]
+[[dependencies.allofitmod]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.14.4]"

@@ -7,9 +7,9 @@
     "customModelName": "Normal",
     "name": "Cheese Bomb Ammo",
     "creativeTab": {
-      "value": "CUSTOM:F"
+      "value": "CUSTOM:AllofItTab"
     },
-    "stackSize": 64,
+    "stackSize": 8,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,

@@ -1,11 +1,12 @@
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorCheeseMuncherPlayerCollidesWithThisEntity extends Elementstestagain.ModElement {
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.entity.Entity;
 
-	public MCreatorCheeseMuncherPlayerCollidesWithThisEntity(Elementstestagain instance) {
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorCheeseMuncherPlayerCollidesWithThisEntity extends Elementsallofitmod.ModElement {
+	public MCreatorCheeseMuncherPlayerCollidesWithThisEntity(Elementsallofitmod instance) {
 		super(instance, 8);
-
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
@@ -13,11 +14,7 @@ public class MCreatorCheeseMuncherPlayerCollidesWithThisEntity extends Elementst
 			System.err.println("Failed to load dependency entity for procedure MCreatorCheeseMuncherPlayerCollidesWithThisEntity!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
-
 		entity.setMotionMultiplier(null, new Vec3d(0.25D, (double) 0.05F, 0.25D));
-
 	}
-
 }

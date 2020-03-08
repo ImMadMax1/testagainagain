@@ -2,14 +2,6 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "F",
-      "type": "tab",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "BlockOcheese",
       "type": "block",
       "sortid": 2,
@@ -176,6 +168,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "AllofItTab",
+      "type": "tab",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -183,19 +183,32 @@
   "language_map": {
     "en_us": {
       "block.testagain.blockocheese": "Block Ocheese",
-      "item.testagain.cheeseslices": "Cheese Slice",
-      "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
-      "item.testagain.cheesebomb": "Cheese Bomb",
+      "entity.allofitmod.cheesemuncher": "Cheese Muncher",
+      "item.allofitmod.cheesefluid_bucket": "Cheesefluid Bucket",
+      "itemGroup.taballofittab": "All-of-It Mod",
+      "item.allofitmod.cheesebomb": "Cheese Bomb",
+      "item.testagain.cheesebombammo": "Cheese Bomb Ammo",
       "fluid.cheesefluid": "Cheesefluid",
-      "itemGroup.tabf": "Random Shit",
+      "item.allofitmod.cheeseslices": "Cheese Slice",
+      "advancements.cheeseswimming.descr": "Go swimming in cheese",
+      "block.allofitmod.blockocheese": "Block Ocheese",
+      "entity.testagain.cheesemuncher": "Cheese Muncher",
+      "item.testagain.cheeseslices": "Cheese Slice",
+      "item.allofitmod.cheesebombammo": "Cheese Bomb Ammo",
+      "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
+      "item.testagain.cheesemuncher": "Cheese Muncher Spawn Egg",
+      "advancements.cheeseswimming.title": "Cheese Aquatics",
+      "item.testagain.cheesebomb": "Cheese Bomb",
+      "item.allofitmod.knife": "Knife",
+      "item.allofitmod.cheesemuncher": "Cheese Muncher Spawn Egg",
       "item.testagain.knife": "Knife"
     }
   },
   "workspaceSettings": {
-    "modid": "testagain",
-    "modName": "testagain",
+    "modid": "allofitmod",
+    "modName": "All-Of-It Mod",
     "version": "1.0.0",
-    "author": "Max",
+    "author": "ImMadMax And SirLanceathott",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

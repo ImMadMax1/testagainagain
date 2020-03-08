@@ -1,5 +1,5 @@
 
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -33,13 +33,13 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
-	@ObjectHolder("testagain:cheesebomb")
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorCheeseBomb extends Elementsallofitmod.ModElement {
+	@ObjectHolder("allofitmod:cheesebomb")
 	public static final Item block = null;
-	@ObjectHolder("testagain:entitybulletcheesebomb")
+	@ObjectHolder("allofitmod:entitybulletcheesebomb")
 	public static final EntityType arrow = null;
-	public MCreatorCheeseBomb(Elementstestagain instance) {
+	public MCreatorCheeseBomb(Elementsallofitmod instance) {
 		super(instance, 5);
 	}
 
@@ -60,7 +60,7 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(MCreatorF.tab).maxDamage(100));
+			super(new Item.Properties().group(MCreatorAllofItTab.tab).maxDamage(100));
 			setRegistryName("cheesebomb");
 		}
 
@@ -81,12 +81,6 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 		}
 
 		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
-		}
-
-		@Override
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
@@ -99,13 +93,13 @@ public class MCreatorCheeseBomb extends Elementstestagain.ModElement {
 					}
 				}
 				if (entity.abilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, itemstack) > 0 || slotID != -1) {
-					float power = 1f;
+					float power = 0.7000000000000001f;
 					ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 					entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
 					entityarrow.setSilent(true);
 					entityarrow.setIsCritical(false);
 					entityarrow.setDamage(0);
-					entityarrow.setKnockbackStrength(5);
+					entityarrow.setKnockbackStrength(3);
 					entityarrow.setFire(100);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					int x = (int) entity.posX;

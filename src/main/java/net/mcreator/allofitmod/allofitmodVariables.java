@@ -1,4 +1,4 @@
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
 import net.minecraftforge.fml.network.PacketDistributor;
 import net.minecraftforge.fml.network.NetworkEvent;
@@ -14,9 +14,9 @@ import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
 
-public class testagainVariables {
+public class allofitmodVariables {
 	public static class WorldVariables extends WorldSavedData {
-		public static final String DATA_NAME = "testagain_worldvars";
+		public static final String DATA_NAME = "allofitmod_worldvars";
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -37,9 +37,9 @@ public class testagainVariables {
 		public void syncData(World world) {
 			this.markDirty();
 			if (world.isRemote) {
-				testagain.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(1, this));
+				allofitmod.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(1, this));
 			} else {
-				testagain.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), new WorldSavedDataSyncMessage(1, this));
+				allofitmod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), new WorldSavedDataSyncMessage(1, this));
 			}
 		}
 		static WorldVariables clientSide = new WorldVariables();
@@ -53,7 +53,7 @@ public class testagainVariables {
 	}
 
 	public static class MapVariables extends WorldSavedData {
-		public static final String DATA_NAME = "testagain_mapvars";
+		public static final String DATA_NAME = "allofitmod_mapvars";
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -74,9 +74,9 @@ public class testagainVariables {
 		public void syncData(World world) {
 			this.markDirty();
 			if (world.isRemote) {
-				testagain.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(0, this));
+				allofitmod.PACKET_HANDLER.sendToServer(new WorldSavedDataSyncMessage(0, this));
 			} else {
-				testagain.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
+				allofitmod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
 			}
 		}
 		static MapVariables clientSide = new MapVariables();
@@ -126,10 +126,10 @@ public class testagainVariables {
 			if (side.isServer()) {
 				message.data.markDirty();
 				if (message.type == 0) {
-					testagain.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), message);
+					allofitmod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), message);
 					world.getServer().getWorld(DimensionType.OVERWORLD).getSavedData().set(message.data);
 				} else {
-					testagain.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), message);
+					allofitmod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.dimension::getType), message);
 					((ServerWorld) world).getSavedData().set(message.data);
 				}
 			} else {

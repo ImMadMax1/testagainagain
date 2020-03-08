@@ -1,5 +1,5 @@
 
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,16 +35,16 @@ import net.minecraft.block.Block;
 
 import java.util.Random;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorCheesefluid extends Elementstestagain.ModElement {
-	@ObjectHolder("testagain:cheesefluid")
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorCheesefluid extends Elementsallofitmod.ModElement {
+	@ObjectHolder("allofitmod:cheesefluid")
 	public static final FlowingFluidBlock block = null;
-	@ObjectHolder("testagain:cheesefluid_bucket")
+	@ObjectHolder("allofitmod:cheesefluid_bucket")
 	public static final Item bucket = null;
 	private FlowingFluid flowing = null;
 	private FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
-	public MCreatorCheesefluid(Elementstestagain instance) {
+	public MCreatorCheesefluid(Elementsallofitmod instance) {
 		super(instance, 5);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -58,7 +58,8 @@ public class MCreatorCheesefluid extends Elementstestagain.ModElement {
 	@Override
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing,
-				FluidAttributes.builder(new ResourceLocation("testagain:blocks/liquidcheese"), new ResourceLocation("testagain:blocks/flowingcheese"))
+				FluidAttributes
+						.builder(new ResourceLocation("allofitmod:blocks/liquidcheese"), new ResourceLocation("allofitmod:blocks/flowingcheese"))
 						.luminosity(0).density(4000).viscosity(2000)).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("cheesefluid");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("cheesefluid_flowing");
@@ -76,8 +77,9 @@ public class MCreatorCheesefluid extends Elementstestagain.ModElement {
 				}
 			}
 		}.setRegistryName("cheesefluid"));
-		elements.items.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MCreatorF.tab))
-				.setRegistryName("cheesefluid_bucket"));
+		elements.items
+				.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(MCreatorAllofItTab.tab))
+						.setRegistryName("cheesefluid_bucket"));
 	}
 
 	@Override

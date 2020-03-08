@@ -1,11 +1,11 @@
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorCheeseSliceremovepotioneffect extends Elementstestagain.ModElement {
-	public MCreatorCheeseSliceremovepotioneffect(Elementstestagain instance) {
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorCheeseSliceremovepotioneffect extends Elementsallofitmod.ModElement {
+	public MCreatorCheeseSliceremovepotioneffect(Elementsallofitmod instance) {
 		super(instance, 4);
 	}
 

@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Cheese Slice",
     "creativeTab": {
-      "value": "FOOD"
+      "value": "CUSTOM:AllofItTab"
     },
     "stackSize": 16,
     "nutritionalValue": 1,

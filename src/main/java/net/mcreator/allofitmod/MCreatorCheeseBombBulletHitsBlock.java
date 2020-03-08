@@ -1,4 +1,4 @@
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
 import net.minecraft.world.World;
 import net.minecraft.world.Explosion;
@@ -8,9 +8,9 @@ import net.minecraft.block.BlockState;
 
 import java.util.Map;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorCheeseBombBulletHitsBlock extends Elementstestagain.ModElement {
-	public MCreatorCheeseBombBulletHitsBlock(Elementstestagain instance) {
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorCheeseBombBulletHitsBlock extends Elementsallofitmod.ModElement {
+	public MCreatorCheeseBombBulletHitsBlock(Elementsallofitmod instance) {
 		super(instance, 5);
 	}
 

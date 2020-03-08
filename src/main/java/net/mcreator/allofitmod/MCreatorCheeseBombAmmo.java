@@ -1,13 +1,23 @@
 
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorCheeseBombAmmo extends Elementstestagain.ModElement {
+import net.minecraftforge.registries.ObjectHolder;
 
-	@ObjectHolder("testagain:cheesebombammo")
+import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.block.BlockState;
+
+import java.util.List;
+
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorCheeseBombAmmo extends Elementsallofitmod.ModElement {
+	@ObjectHolder("allofitmod:cheesebombammo")
 	public static final Item block = null;
-
-	public MCreatorCheeseBombAmmo(Elementstestagain instance) {
+	public MCreatorCheeseBombAmmo(Elementsallofitmod instance) {
 		super(instance, 7);
 	}
 
@@ -15,11 +25,9 @@ public class MCreatorCheeseBombAmmo extends Elementstestagain.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
-			super(new Item.Properties().group(MCreatorF.tab).maxStackSize(64));
+			super(new Item.Properties().group(MCreatorAllofItTab.tab).maxStackSize(8));
 			setRegistryName("cheesebombammo");
 		}
 
@@ -43,7 +51,5 @@ public class MCreatorCheeseBombAmmo extends Elementstestagain.ModElement {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Ammo for the cheese bomb."));
 		}
-
 	}
-
 }

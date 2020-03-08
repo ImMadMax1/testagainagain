@@ -1,5 +1,5 @@
 
-package net.mcreator.testagain;
+package net.mcreator.allofitmod;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -9,11 +9,11 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-@Elementstestagain.ModElement.Tag
-public class MCreatorKnife extends Elementstestagain.ModElement {
-	@ObjectHolder("testagain:knife")
+@Elementsallofitmod.ModElement.Tag
+public class MCreatorKnife extends Elementsallofitmod.ModElement {
+	@ObjectHolder("allofitmod:knife")
 	public static final Item block = null;
-	public MCreatorKnife(Elementstestagain instance) {
+	public MCreatorKnife(Elementsallofitmod instance) {
 		super(instance, 3);
 	}
 
