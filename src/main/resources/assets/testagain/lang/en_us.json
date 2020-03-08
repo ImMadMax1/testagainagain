@@ -1,10 +1,6 @@
 {
   "block.testagain.blockocheese": "Block Ocheese",
   "item.testagain.cheeseslices": "Cheese Slice",
-  "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
-  "advancements.cheeseswimming.title": "Cheese Aquatics",
-  "fluid.cheesefluid": "Cheesefluid",
-  "advancements.cheeseswimming.descr": "Go swimming in cheese",
   "itemGroup.tabf": "Random Shit",
   "item.testagain.knife": "Knife"
 }

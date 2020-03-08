@@ -50,6 +50,22 @@
       }
     },
     {
+      "name": "Cheeseswimming",
+      "type": "achievement",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Cheesefluid",
+      "type": "fluid",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
       "name": "CheesefluidMobplayerCollidesBlock",
       "type": "procedure",
       "sortid": 5,
@@ -66,20 +82,40 @@
       }
     },
     {
-      "name": "Cheesefluid",
-      "type": "fluid",
+      "name": "CheeseBomb",
+      "type": "gun",
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {}
     },
     {
-      "name": "Cheeseswimming",
-      "type": "achievement",
-      "sortid": 6,
+      "name": "CheeseBombBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "ids": {}
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -88,10 +124,6 @@
     "en_us": {
       "block.testagain.blockocheese": "Block Ocheese",
       "item.testagain.cheeseslices": "Cheese Slice",
-      "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
-      "advancements.cheeseswimming.title": "Cheese Aquatics",
-      "fluid.cheesefluid": "Cheesefluid",
-      "advancements.cheeseswimming.descr": "Go swimming in cheese",
       "itemGroup.tabf": "Random Shit",
       "item.testagain.knife": "Knife"
     }
