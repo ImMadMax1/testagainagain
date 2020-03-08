@@ -1,10 +1,14 @@
 {
   "block.testagain.blockocheese": "Block Ocheese",
+  "item.testagain.cheesebombammo": "Cheese Bomb Ammo",
+  "fluid.cheesefluid": "Cheesefluid",
+  "advancements.cheeseswimming.descr": "Go swimming in cheese",
+  "itemGroup.tabf": "Random Shit",
+  "entity.testagain.cheesemuncher": "Cheese Muncher",
   "item.testagain.cheeseslices": "Cheese Slice",
   "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
-  "item.testagain.cheesebombammo": "Cheese Bomb Ammo",
+  "item.testagain.cheesemuncher": "Cheese Muncher Spawn Egg",
+  "advancements.cheeseswimming.title": "Cheese Aquatics",
   "item.testagain.cheesebomb": "Cheese Bomb",
-  "fluid.cheesefluid": "Cheesefluid",
-  "itemGroup.tabf": "Random Shit",
   "item.testagain.knife": "Knife"
 }
