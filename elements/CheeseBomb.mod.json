@@ -3,7 +3,7 @@
   "_type": "gun",
   "definition": {
     "renderType": 0,
-    "texture": "cheesebomb",
+    "texture": "cheesebombslingshot",
     "customModelName": "Normal",
     "name": "Cheese Bomb",
     "creativeTab": {
@@ -11,7 +11,7 @@
     },
     "stackSize": 1,
     "ammoItem": {
-      "value": ""
+      "value": "CUSTOM:CheeseBombAmmo"
     },
     "shootConstantly": false,
     "usageCount": 100,
@@ -27,7 +27,7 @@
     "bulletParticles": false,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {
-      "value": "CUSTOM:CheeseSlices"
+      "value": "CUSTOM:CheeseBombAmmo"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",

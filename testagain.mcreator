@@ -168,6 +168,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "CheeseBombAmmo",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -175,10 +183,8 @@
   "language_map": {
     "en_us": {
       "block.testagain.blockocheese": "Block Ocheese",
-      "entity.testagain.cheesemuncher": "Cheese Muncher",
       "item.testagain.cheeseslices": "Cheese Slice",
       "item.testagain.cheesefluid_bucket": "Cheesefluid Bucket",
-      "item.testagain.cheesemuncher": "Cheese Muncher Spawn Egg",
       "item.testagain.cheesebomb": "Cheese Bomb",
       "fluid.cheesefluid": "Cheesefluid",
       "itemGroup.tabf": "Random Shit",

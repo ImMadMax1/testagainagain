@@ -3,6 +3,10 @@ package net.mcreator.testagain;
 import net.minecraft.world.World;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.state.IProperty;
+import net.minecraft.block.BlockState;
+
+import java.util.Map;
 
 @Elementstestagain.ModElement.Tag
 public class MCreatorCheeseBombBulletHitsBlock extends Elementstestagain.ModElement {
@@ -32,12 +36,315 @@ public class MCreatorCheeseBombBulletHitsBlock extends Elementstestagain.ModElem
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if (!world.isRemote) {
-			world.createExplosion(null, (int) x, (int) y, (int) z, (float) 4, Explosion.Mode.BREAK);
+			world.createExplosion(null, (int) x, (int) y, (int) z, (float) 2, Explosion.Mode.BREAK);
 		}
-		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), MCreatorBlockOcheese.block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)), MCreatorBlockOcheese.block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) (x + 2), (int) (y + 2), (int) (z + 2)), MCreatorBlockOcheese.block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) (x + 3), (int) (y + 3), (int) (z + 3)), MCreatorBlockOcheese.block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) (x + 4), (int) (y + 4), (int) (z + 4)), MCreatorBlockOcheese.block.getDefaultState(), 3);
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorBlockOcheese.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorCheesefluid.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x + (Math.random() * 3)), (int) (y - (Math.random() * 1)), (int) (z - (Math.random() * 3)));
+			BlockState _bs = MCreatorCheesefluid.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
+		{
+			BlockPos _bp = new BlockPos((int) (x - (Math.random() * 3)), (int) (y + (Math.random() * 1)), (int) (z + (Math.random() * 3)));
+			BlockState _bs = MCreatorCheesefluid.block.getDefaultState();
+			BlockState _bso = world.getBlockState(_bp);
+			for (Map.Entry<IProperty<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+				IProperty _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+				if (_bs.has(_property))
+					_bs = _bs.with(_property, (Comparable) entry.getValue());
+			}
+			world.setBlockState(_bp, _bs, 3);
+		}
 	}
 }

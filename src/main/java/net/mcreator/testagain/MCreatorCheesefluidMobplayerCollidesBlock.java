@@ -1,11 +1,8 @@
 package net.mcreator.testagain;
 
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
@@ -36,11 +33,5 @@ public class MCreatorCheesefluidMobplayerCollidesBlock extends Elementstestagain
 				}
 			}
 		}
-		entity.setMotionMultiplier(null, new Vec3d(0.25D, (double) 0.05F, 0.25D));
-		if (entity instanceof PlayerEntity)
-			((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(MCreatorCheeseSlices.block, (int) (1)).getItem() == p.getItem(),
-					(int) 999);
-		if (entity instanceof PlayerEntity)
-			((PlayerEntity) entity).getFoodStats().setFoodLevel((int) 0);
 	}
 }
